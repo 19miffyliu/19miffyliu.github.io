@@ -1,0 +1,296 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+margin: 0;
+}
+
+header {
+    text-align: center;
+    padding: 2%;
+    font: 1rem SansSerif;
+}
+
+/* bg of index.html */
+.div2{
+    border: 0.1rem solid black;
+    height:100%;
+    width:100%;
+    background-image: url("../img/dsktop.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top;
+    background-attachment:fixed;
+}
+
+/* The navbar container */
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    opacity: 0.85;
+    transition: all 0.5s;
+}
+
+/* Navbar links */
+.topnav a{
+    float:left;
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 1%;
+    width: calc(100%/9);
+    text-decoration: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    position: relative;
+    transition: 0.5s;
+}
+
+/* Links - change color on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+    padding-left: 0;
+    padding-right: 2%;
+}
+/* spawn icon after hover */
+.topnav a:hover span:after {
+    zoom: 2.5%;
+    top: 25%;
+    right: 10%;
+    margin-right:0;
+    opacity: 1;
+    position: absolute;
+}
+
+a[id=hm]:hover span:after {
+  content: url('../img/lt/white-t.png');
+}
+
+a[id=dn]:hover span:after {
+  content: url('../img/lt/cyan-t.png');
+}
+body[id=newsbg]{
+     background-color: #4046A4;
+ }
+
+a[id=ar]:hover span:after {
+  content: url('../img/lt/pink-t.png');
+}
+body[id=archbg]{
+    background-color: #A73F8E;
+}
+
+a[id=bw]:hover span:after {
+  content: url('../img/lt/blue-t.png');
+}
+body[id=workbg]{
+    background-color: #1180C8;
+}
+
+a[id=am]:hover span:after {
+  content: url('../img/lt/green-t.png');
+}
+body[id=aboutbg]{
+    background-color: #2b7333;
+}
+
+a[id=fp]:hover span:after {
+  content: url('../img/lt/yellow-t.png');
+}
+body[id=fplanbg]{
+    background-color: #D9C935;
+}
+
+a[id=pr]:hover span:after {
+  content: url('../img/lt/orange-t.png');
+}
+body[id=profobg]{
+    background-color: #D56B1F;
+}
+
+a[id=co]:hover span:after {
+  content: url('../img/lt/red-t.png');
+}
+body[id=contactbg]{
+    background-color: #CF3F23;
+}
+
+a[id=cr]:hover span:after {
+  content: url('../img/lt/black-t.png');
+}
+
+.column {
+    background-color: white;
+    opacity: 0.9;
+    float: left;
+    padding: 1%;
+}
+.column>.side{
+    width: 20.2%;
+    margin-left: 11.1%;
+    border-radius: 0.2rem;
+}
+.column>embed{
+    width: 23rem;
+    height: 30rem;
+    border-radius: 0.2rem;
+}
+
+.column>.middle{
+    width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.tg  {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+.tg td{
+    border-color:black;
+    border-style:solid;
+    border-width:0.03rem;
+    overflow:hidden;
+    padding:0.6rem 0.3rem;
+    word-break:normal;
+}
+
+.tg tr.ongoing{
+    background-color: #D6EEEE;
+}
+.tg th{
+    border-color:black;
+    border-style:solid;
+    border-width:0.1rem;
+    background-color: #777777;
+    opacity: 1;
+    overflow:hidden;
+    padding:0.6rem 0.3rem;
+    word-break:normal;
+}
+.tg .tg-7zrl{
+    text-align:center;
+}
+
+section {
+    background-color: white;
+    opacity: 0.9;
+    display: flex;
+    flex-flow: row wrap;
+    flex: 50rem;
+    padding: 1rem;
+}
+
+
+/* Left and right column */
+section>.side {
+    flex: 1;
+}
+
+/* Middle column */
+section>.middle {
+    flex: 2;
+}
+
+.contactForm{
+    display: block;
+    position: center;
+    background-color: white;
+    opacity: 0.9;
+    padding: 1%;
+}
+
+.contactForm input[type=text]{
+    width: 20%;
+}
+
+.contactForm textarea{
+    width: 100%;
+}
+
+div.gallery {
+    border: 0.1rem solid #ccc;
+    transition: 0.2s;
+}
+
+div.gallery:hover {
+    border: 0.1rem solid black;
+}
+
+div.gallery img {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    border: 0.1rem solid #777;
+}
+
+div.desc {
+    padding: 0.1rem;
+    text-align: center;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 37.5rem) {
+    .column{
+        width: 100%;
+        margin: 0;
+    }
+    section {
+        flex-direction: column;
+    }
+    .topnav a {
+    	padding: 1% 1%;
+    	width: calc(100%/3);
+    }
+    .topnav a:hover span:after {
+        top: 20%;
+        zoom: 2%;
+    }
+    .div2{
+        background-size: cover;
+    }
+}
+footer {
+    background-color: #F1F1F1;
+    opacity: 0.6;
+    text-align: center;
+    padding: 0.6rem;
+    animation: fadeEffect 3s; /* fading effect takes 3s */
+}
+
+@keyframes fadeEffect { /* from 0 to full opacity */
+    from {opacity: 0;}
+    to {opacity: 0.6;}
+}
+
+.btn-group a {
+    position: fixed;
+    right: 0;
+    bottom: 5%;
+    background-color: gray; /* Green */
+    border: 0.1rem black;
+    color: white;
+    padding: 1%;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+    width: 15%;
+    z-index: 1;
+    border-radius: 0.1rem;
+
+}
+
+.btn-group a:hover {
+    color:black;
+    background-color: #ddd;
+    transition: 0.4s;
+}
+
+

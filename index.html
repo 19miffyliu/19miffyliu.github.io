@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" type="text/css" href="css/style-1.css">
+	<title>Miffy Liu's Blog</title>
+	<meta charset="utf-8">
+	<!-- add header & footer on every page-->
+	<script
+			src="https://code.jquery.com/jquery-3.3.1.js"
+			integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+			crossorigin="anonymous">
+	</script>
+	<script>
+		$(function(){
+			$("#header").load("header.html");
+			$("#footer").load("footer.html");
+		});
+	</script>
+	<!-- make windows appear on scroll down-->
+	<!--ref: https://stackoverflow.com/questions/20307555/how-to-make-text-appear-on-scroll-in-html/20308531 -->
+	<script>
+		window.addEventListener("scroll", function() {showFunction()});
+
+		function showFunction() {
+			if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+				document.getElementById("Copyright").style.display = "block";
+			} else {
+				document.getElementById("Copyright").style.display = "none";
+			}
+		}
+	</script>
+
+</head>
+<body>
+<div class="div2">
+	<header><h1>Miffy Liu</h1></header>
+<div id="header"></div>
+
+<section>
+	<div class="column side">
+		<h2>Side</h2>
+		<p>Welcome!</p>
+	</div>
+	<div class="column middle">
+		<h2>Introduction</h2>
+		<p>Welcome to my website! I'm a second-year student major in Computer Science and Creative Computing.</p>
+		<p> This website is currently still in development (placeholders everywhere...) if you want to see finished pages, click:</p>
+		<ul>
+			<li>About Me</li>
+			<li>Profolio</li>
+			<li>Contact</li>
+		</ul>
+	</div>
+	<!--
+</section>
+	<section>
+	<div class="column side">
+		<h2>Side</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
+	</div>
+	<div class="column middle">
+		<h2>Main Content</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+	</div>
+-->
+</section>
+<div class="btn-group">
+	<a href="#Top">Back to Top</a>
+</div>
+	<footer>
+<div id="footer"></div>
+	</footer>
+</div><!--closing the bg-->
+
+</body>
+</html>
